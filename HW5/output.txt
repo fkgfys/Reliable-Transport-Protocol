@@ -1,0 +1,868 @@
+-- * Network Simulator v1.0 * --
+Enter number of messages to simulate (> 0): [10] 30
+Enter packet loss probability (0.0 for no loss): [0.0] 0.1
+Enter packet corruption probability (0.0 for no corruption): [0.0] 0.1
+Enter average time between messages from sender's layer 5 (> 0.0): [1000] 50 
+Enter window size (> 0): [8] 4
+Enter retransmission timeout (>0.0) [15.0] 30
+Enter trace level (>= 0): [0] 2
+Enter random seed: [0] 1000
+
+EVENT time: 86.43452253791925  type: 1  entity: 0
+A: Sended packet 0!!!
+
+EVENT time: 95.46330149235511  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 99.0155034028138  type: 2  entity: 0
+A: Received an ACK of packet 0!!!
+A: Moved base to 1!!!
+
+EVENT time: 110.67537461470383  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 113.02233954893644  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 122.72872096926787  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!
+
+EVENT time: 124.87563707388531  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 131.7070833460494  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 141.6060060426649  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 149.69634083071384  type: 1  entity: 0
+A: Sended packet 3!!!
+
+EVENT time: 155.01300088503677  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 163.29303872798852  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 246.31794183172093  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 251.2624286629841  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 252.67662587359231  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 314.1605883968627  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 319.6081423383282  type: 1  entity: 0
+A: Sended packet 6!!!
+
+EVENT time: 319.75246436964017  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 320.8950163274026  type: 2  entity: 1
+B: Correct packet 6, deliver it to upper layer!!!
+B: Sended ACK for packet 6!!!
+B: Now expecting packet 7!!!
+
+EVENT time: 328.74114200262454  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+startTimer: Warning: Attempting to start a timer that is already running
+
+EVENT time: 336.01590014343697  type: 2  entity: 0
+A: Received an ACK of packet 6!!!
+A: Moved base to 7!!!
+
+EVENT time: 375.70421460615864  type: 1  entity: 0
+A: Sended packet 7!!!
+
+EVENT time: 378.77300332651754  type: 2  entity: 1
+B: Correct packet 7, deliver it to upper layer!!!
+B: Sended ACK for packet 7!!!
+B: Now expecting packet 0!!!
+
+EVENT time: 379.99081392864775  type: 2  entity: 0
+A: Received an ACK of packet 7!!!
+A: Moved base to 8!!!
+
+EVENT time: 394.5677053132725  type: 1  entity: 0
+A: SeqNo reached the limit. Wraparound!!!
+A: Sended packet 0!!!
+
+EVENT time: 399.2952055421613  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 403.84719382305366  type: 2  entity: 0
+A: Received an ACK of packet 0!!!
+A: Moved base to 1!!!
+
+EVENT time: 425.5592516861476  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 434.6354564043092  type: 1  entity: 0
+toLayer3: packet being lost
+A: Sended packet 2!!!
+
+EVENT time: 435.1250038148136  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 438.46269112216555  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!
+startTimer: Warning: Attempting to start a timer that is already running
+
+EVENT time: 455.5592516861476  type: 0  entity: 0
+toLayer3: packet being lost
+A: Resended packet 2!!!
+
+EVENT time: 485.5592516861476  type: 0  entity: 0
+A: Resended packet 2!!!                            // Case 3: Retransmission ofter RTO
+
+EVENT time: 490.86904507583847  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 500.8174077578051  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 523.4107486190375  type: 1  entity: 0
+toLayer3: packet being corrupted
+A: Sended packet 3!!!
+
+EVENT time: 525.6324655903805  type: 2  entity: 1
+
+EVENT time: 553.4107486190375  type: 0  entity: 0
+toLayer3: packet being lost
+A: Resended packet 3!!!                            // Case 3: Retransmission after RTO
+
+EVENT time: 583.4107486190375  type: 0  entity: 0
+A: Resended packet 3!!!                            // Case 3: Retransmission after RTO
+
+EVENT time: 587.2395397808771  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 589.1195715201269  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 591.2717062898648  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 598.4651631214332  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 607.5332193975647  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 646.9405194250313  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 655.5597705008088  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 659.5959349345378  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 701.9470809045687  type: 1  entity: 0
+A: Sended packet 6!!!
+
+EVENT time: 703.1448408459731  type: 2  entity: 1
+B: Correct packet 6, deliver it to upper layer!!!
+B: Sended ACK for packet 6!!!
+B: Now expecting packet 7!!!
+
+EVENT time: 710.1284524063846  type: 2  entity: 0
+A: Received an ACK of packet 6!!!
+A: Moved base to 7!!!
+
+EVENT time: 755.2201910458693  type: 1  entity: 0
+A: Sended packet 7!!!
+
+EVENT time: 758.9292275765251  type: 2  entity: 1
+B: Correct packet 7, deliver it to upper layer!!!
+toLayer3: packet being lost
+B: Sended ACK for packet 7!!!
+B: Now expecting packet 0!!!
+
+EVENT time: 785.2201910458693  type: 0  entity: 0
+A: Resended packet 7!!!
+
+EVENT time: 786.31275368511  type: 2  entity: 1
+B: Duplicate packet 7!!!
+B: Sended ACK for packet 7!!!
+
+EVENT time: 794.8671834467605  type: 2  entity: 0
+A: Received an ACK of packet 7!!!
+A: Moved base to 8!!!
+
+EVENT time: 841.0626544999543  type: 1  entity: 0
+A: SeqNo reached the limit. Wraparound!!!
+A: Sended packet 0!!!
+
+EVENT time: 850.8239692373426  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+toLayer3: packet being corrupted
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 852.1782891323589  type: 2  entity: 0
+Corrupted ACK !!!
+
+EVENT time: 871.0626544999543  type: 0  entity: 0
+A: Resended packet 0!!!
+
+EVENT time: 874.6887417218544  type: 2  entity: 1
+B: Duplicate packet 0!!!
+toLayer3: packet being lost
+B: Sended ACK for packet 0!!!
+
+EVENT time: 901.0626544999543  type: 0  entity: 0
+A: Resended packet 0!!!
+
+EVENT time: 906.5457625049594  type: 2  entity: 1
+B: Duplicate packet 0!!!
+toLayer3: packet being lost
+B: Sended ACK for packet 0!!!
+
+EVENT time: 911.3498336741235  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 919.850154118473  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 929.6482741782893  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!                               // Case 2: send_base moved from 0 to 2
+
+EVENT time: 945.945616016114  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 951.215033417768  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 954.031403546251  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 1023.6732078005311  type: 1  entity: 0
+A: Sended packet 3!!!
+
+EVENT time: 1030.7139500106816  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 1032.0657979064304  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 1034.6155278176216  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+startTimer: Warning: Attempting to start a timer that is already running
+
+EVENT time: 1038.2850123599965  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+toLayer3: packet being corrupted
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 1046.395580919828  type: 2  entity: 0
+Corrupted ACK !!!
+
+EVENT time: 1051.1001922666098  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 1053.6732078005311  type: 0  entity: 0
+A: Resended packet 4!!!
+toLayer3: packet being lost
+startTimer: Warning: Attempting to start a timer that is already running
+A: Resended packet 5!!!
+
+EVENT time: 1054.7652821436202  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 1056.1978820154425  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 1060.280251472518  type: 2  entity: 1
+B: Duplicate packet 4!!!
+B: Sended ACK for packet 4!!!
+
+EVENT time: 1068.7651905880916  type: 2  entity: 0
+
+EVENT time: 1080.3582873012483  type: 1  entity: 0
+A: Sended packet 6!!!
+
+EVENT time: 1089.1390423291728  type: 2  entity: 1
+B: Correct packet 6, deliver it to upper layer!!!
+B: Sended ACK for packet 6!!!
+B: Now expecting packet 7!!!
+
+EVENT time: 1092.1079134495071  type: 1  entity: 0
+A: Sended packet 7!!!
+
+EVENT time: 1095.08386486404  type: 2  entity: 1
+B: Correct packet 7, deliver it to upper layer!!!
+B: Sended ACK for packet 7!!!
+B: Now expecting packet 0!!!
+
+EVENT time: 1098.0708639790034  type: 2  entity: 0
+A: Received an ACK of packet 6!!!
+A: Moved base to 7!!!
+startTimer: Warning: Attempting to start a timer that is already running
+
+EVENT time: 1102.3490096743676  type: 2  entity: 0
+A: Received an ACK of packet 7!!!
+A: Moved base to 8!!!
+
+EVENT time: 1128.4096804712058  type: 1  entity: 0
+A: SeqNo reached the limit. Wraparound!!!
+A: Sended packet 0!!!
+
+EVENT time: 1132.2121036408582  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+toLayer3: packet being lost
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 1158.4096804712058  type: 0  entity: 0
+toLayer3: packet being lost
+A: Resended packet 0!!!
+
+EVENT time: 1179.589220862453  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 1183.8599505600146  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 1188.4096804712058  type: 0  entity: 0
+A: Resended packet 0!!!
+startTimer: Warning: Attempting to start a timer that is already running
+A: Resended packet 1!!!
+
+EVENT time: 1190.527024140141  type: 2  entity: 1
+B: Duplicate packet 0!!!
+B: Sended ACK for packet 0!!!
+
+EVENT time: 1192.358348338267  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!                                 // Case 2: send_base moved from 0 to 2
+
+EVENT time: 1193.4837488937042  type: 2  entity: 1
+B: Duplicate packet 1!!!
+toLayer3: packet being lost
+B: Sended ACK for packet 1!!!
+
+EVENT time: 1197.4879604480116  type: 2  entity: 0
+
+EVENT time: 1254.3748283333841  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 1257.6688436536758  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 1264.1619006927701  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 1300.479140598773  type: 1  entity: 0
+toLayer3: packet being corrupted
+A: Sended packet 3!!!
+
+EVENT time: 1306.7041230506302  type: 2  entity: 1
+
+EVENT time: 1330.479140598773  type: 0  entity: 0
+A: Resended packet 3!!!
+
+EVENT time: 1339.8333994567704  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 1346.7629016998808  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 1360.8417004913479  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 1369.273079622791  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 1374.413678395947  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 1440.5163731803336  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 1446.7828302865685  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 1455.6792199468975  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 1523.838007751701  type: 1  entity: 0
+Simulator terminated at time 1523.838007751701
+
+
+===============STATISTICS=======================
+Number of original packets transmitted by A: 30
+Number of retransmissions by A: 11
+Number of data packets delivered to layer 5 at B: 30
+Number of ACK packets sent by B: 36
+Number of corrupted packets: 4
+Ratio of lost packets: 0.17073170731707318
+Ratio of corrupted packets: 0.0975609756097561
+Average RTT: 12.067180527598694
+Average communication time: 18.346914070050154
+==================================================
+
+The initial value of my retransmission timer is 10.0 because the given average RTT is
+about 10.0, but with this value, retransmissions always happen even if the packet is not
+lost. I looked at the output trace and noticed that the RTT sometimes exceeded 10.0, so I
+set the retransmission timer to a higher value, which is 30.0, then the simulation worked 
+well.
+
+
+
+Case1:
+
+-- * Network Simulator v1.0 * --
+Enter number of messages to simulate (> 0): [10] 30
+Enter packet loss probability (0.0 for no loss): [0.0] 
+Enter packet corruption probability (0.0 for no corruption): [0.0] 
+Enter average time between messages from sender's layer 5 (> 0.0): [1000] 200
+Enter window size (> 0): [8] 4
+Enter retransmission timeout (>0.0) [15.0] 30
+Enter trace level (>= 0): [0] 2
+Enter random seed: [0] 100
+
+EVENT time: 154.5701467940306  type: 1  entity: 0
+A: Sended packet 0!!!
+
+EVENT time: 159.29764702291942  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 167.09317300943025  type: 2  entity: 0
+A: Received an ACK of packet 0!!!
+A: Moved base to 1!!!
+
+EVENT time: 440.1257362590411  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 447.39170506912444  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 451.5544907986694  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!
+
+EVENT time: 715.5369731742302  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 724.4069948423719  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 728.4947965941343  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 968.4499649037141  type: 1  entity: 0
+A: Sended packet 3!!!
+
+EVENT time: 970.9913937803277  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 974.2074037903989  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 1045.5275124362927  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 1047.4405041657767  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 1055.6235847041232  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 1058.6260567033908  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 1066.5135959959716  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 1070.7527390362256  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 1357.0848719748528  type: 1  entity: 0
+A: Sended packet 6!!!
+
+EVENT time: 1365.5758537553027  type: 2  entity: 1
+B: Correct packet 6, deliver it to upper layer!!!
+B: Sended ACK for packet 6!!!
+B: Now expecting packet 7!!!
+
+EVENT time: 1370.7538071840572  type: 2  entity: 0
+A: Received an ACK of packet 6!!!
+A: Moved base to 7!!!
+
+EVENT time: 1756.413464766381  type: 1  entity: 0
+A: Sended packet 7!!!
+
+EVENT time: 1760.2395092623676  type: 2  entity: 1
+B: Correct packet 7, deliver it to upper layer!!!
+B: Sended ACK for packet 7!!!
+B: Now expecting packet 0!!!
+
+EVENT time: 1768.9386883144628  type: 2  entity: 0
+A: Received an ACK of packet 7!!!
+A: Moved base to 8!!!
+
+EVENT time: 2097.1465193639942  type: 1  entity: 0
+A: SeqNo reached the limit. Wraparound!!!
+A: Sended packet 0!!!
+
+EVENT time: 2101.1219824823756  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 2102.865230262154  type: 2  entity: 0
+A: Received an ACK of packet 0!!!
+A: Moved base to 1!!!
+
+EVENT time: 2121.9397564622946  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 2126.1635181737724  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 2128.4712057863094  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!
+
+EVENT time: 2260.274056215095  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 2268.170384838405  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 2271.4015015106665  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 2352.9892880031744  type: 1  entity: 0
+A: Sended packet 3!!!
+
+EVENT time: 2360.342875453963  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 2368.1219214453567  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 2602.313303018281  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 2607.386883144628  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 2611.2997222815643  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 2731.7850276192517  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 2733.003662221138  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 2737.326303903318  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 2985.4548783837404  type: 1  entity: 0
+A: Sended packet 6!!!
+
+EVENT time: 2987.894680623799  type: 2  entity: 1
+B: Correct packet 6, deliver it to upper layer!!!
+B: Sended ACK for packet 6!!!
+B: Now expecting packet 7!!!
+
+EVENT time: 2994.8384655293444  type: 2  entity: 0
+A: Received an ACK of packet 6!!!
+A: Moved base to 7!!!
+
+EVENT time: 3131.0403759880373  type: 1  entity: 0
+A: Sended packet 7!!!
+
+EVENT time: 3135.90218817713  type: 2  entity: 1
+B: Correct packet 7, deliver it to upper layer!!!
+B: Sended ACK for packet 7!!!
+B: Now expecting packet 0!!!
+
+EVENT time: 3143.1269569994206  type: 2  entity: 0
+A: Received an ACK of packet 7!!!
+A: Moved base to 8!!!
+
+EVENT time: 3440.998565630055  type: 1  entity: 0
+A: SeqNo reached the limit. Wraparound!!!
+A: Sended packet 0!!!
+
+EVENT time: 3444.0115970336014  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 3449.1549424726104  type: 2  entity: 0
+A: Received an ACK of packet 0!!!
+A: Moved base to 1!!!
+
+EVENT time: 3597.314371166113  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 3603.18640705588  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 3605.5410626545004  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!
+
+EVENT time: 3898.287911618397  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 3905.2830591753905  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 3907.4731894894257  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 4163.42051454207  type: 1  entity: 0
+A: Sended packet 3!!!
+
+EVENT time: 4173.235114597003  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 4175.178868984039  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 4311.947996459853  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 4313.408337656789  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 4318.7291177098905  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 4489.553514206366  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 4497.35123752556  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 4503.830011902219  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 4834.656819360943  type: 1  entity: 0
+A: Sended packet 6!!!
+
+EVENT time: 4838.263679921873  type: 2  entity: 1
+B: Correct packet 6, deliver it to upper layer!!!
+B: Sended ACK for packet 6!!!
+B: Now expecting packet 7!!!
+
+EVENT time: 4844.392254402295  type: 2  entity: 0
+A: Received an ACK of packet 6!!!
+A: Moved base to 7!!!
+
+EVENT time: 5057.222205267495  type: 1  entity: 0
+A: Sended packet 7!!!
+
+EVENT time: 5063.118961149938  type: 2  entity: 1
+B: Correct packet 7, deliver it to upper layer!!!
+B: Sended ACK for packet 7!!!
+B: Now expecting packet 0!!!
+
+EVENT time: 5067.174352244637  type: 2  entity: 0
+A: Received an ACK of packet 7!!!
+A: Moved base to 8!!!
+
+EVENT time: 5344.3769646290475  type: 1  entity: 0
+A: SeqNo reached the limit. Wraparound!!!
+A: Sended packet 0!!!
+
+EVENT time: 5346.410534989471  type: 2  entity: 1
+B: Correct packet 0, deliver it to upper layer!!!
+B: Sended ACK for packet 0!!!
+B: Now expecting packet 1!!!
+
+EVENT time: 5352.967864009522  type: 2  entity: 0
+A: Received an ACK of packet 0!!!
+A: Moved base to 1!!!
+
+EVENT time: 5403.289895321513  type: 1  entity: 0
+A: Sended packet 1!!!
+
+EVENT time: 5406.946470534379  type: 2  entity: 1
+B: Correct packet 1, deliver it to upper layer!!!
+B: Sended ACK for packet 1!!!
+B: Now expecting packet 2!!!
+
+EVENT time: 5414.9801324503305  type: 2  entity: 0
+A: Received an ACK of packet 1!!!
+A: Moved base to 2!!!
+
+EVENT time: 5753.569139683218  type: 1  entity: 0
+A: Sended packet 2!!!
+
+EVENT time: 5758.588335825679  type: 2  entity: 1
+B: Correct packet 2, deliver it to upper layer!!!
+B: Sended ACK for packet 2!!!
+B: Now expecting packet 3!!!
+
+EVENT time: 5766.269051179541  type: 2  entity: 0
+A: Received an ACK of packet 2!!!
+A: Moved base to 3!!!
+
+EVENT time: 6147.038178655354  type: 1  entity: 0
+A: Sended packet 3!!!
+
+EVENT time: 6149.423871578112  type: 2  entity: 1
+B: Correct packet 3, deliver it to upper layer!!!
+B: Sended ACK for packet 3!!!
+B: Now expecting packet 4!!!
+
+EVENT time: 6152.764030884731  type: 2  entity: 0
+A: Received an ACK of packet 3!!!
+A: Moved base to 4!!!
+
+EVENT time: 6317.538987395856  type: 1  entity: 0
+A: Sended packet 4!!!
+
+EVENT time: 6321.804773094882  type: 2  entity: 1
+B: Correct packet 4, deliver it to upper layer!!!
+B: Sended ACK for packet 4!!!
+B: Now expecting packet 5!!!
+
+EVENT time: 6331.166173284097  type: 2  entity: 0
+A: Received an ACK of packet 4!!!
+A: Moved base to 5!!!
+
+EVENT time: 6491.604358043153  type: 1  entity: 0
+A: Sended packet 5!!!
+
+EVENT time: 6494.071352275155  type: 2  entity: 1
+B: Correct packet 5, deliver it to upper layer!!!
+B: Sended ACK for packet 5!!!
+B: Now expecting packet 6!!!
+
+EVENT time: 6503.3322244941555  type: 2  entity: 0
+A: Received an ACK of packet 5!!!
+A: Moved base to 6!!!
+
+EVENT time: 6730.588702047792  type: 1  entity: 0
+Simulator terminated at time 6730.588702047792
+
+
+===============STATISTICS=======================
+Number of original packets transmitted by A: 30
+Number of retransmissions by A: 0
+Number of data packets delivered to layer 5 at B: 30
+Number of ACK packets sent by B: 30
+Number of corrupted packets: 0
+Ratio of lost packets: 0.0
+Ratio of corrupted packets: 0.0
+Average RTT: 10.2575304422131
+Average communication time: 10.2575304422131
+==================================================
